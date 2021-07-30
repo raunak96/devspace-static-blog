@@ -14,7 +14,7 @@ const Navbar = () => {
 								objectFit="contain"
 							/>
 						</div>
-						<span className="ml-3 text-lg">DevSpace</span>
+						<span className="ml-3 text-xl">DevSpace</span>
 					</a>
 				</Link>
 				<ul className="flex flex-wrap items-center space-x-4">

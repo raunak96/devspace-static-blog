@@ -11,6 +11,9 @@
             "pages/*": [
                 "./pages/*"
             ],
+            "utils/*": [
+                "./utils/*"
+            ],
         }
     },
     "exclude": [
