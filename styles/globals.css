@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+	.nav-link {
+		@apply cursor-pointer uppercase text-base hover:text-indigo-300 opacity-80 hover:opacity-100;
+	}
+}
