@@ -26,6 +26,12 @@ html::-webkit-scrollbar-thumb {
 	.nav-link {
 		@apply cursor-pointer uppercase text-base hover:text-indigo-300 opacity-80 hover:opacity-100;
 	}
+	.pagination-btn {
+		@apply cursor-pointer text-lg text-emerald-500 bg-white border border-emerald-500 py-1 px-2 rounded-full flex items-center justify-center h-10 w-10 disabled:opacity-50 disabled:text-white disabled:bg-emerald-500 disabled:border-none disabled:cursor-not-allowed hover:opacity-80 hover:bg-emerald-500 hover:border-none hover:text-white;
+	}
+	.pagination-btn-active {
+		@apply text-white bg-emerald-500 border-none;
+	}
 }
 
 /* Fix category colors in production */
