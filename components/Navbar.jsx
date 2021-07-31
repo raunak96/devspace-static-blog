@@ -19,8 +19,8 @@ const Navbar = () => {
 				</Link>
 				<ul className="flex flex-wrap items-center space-x-4">
 					<li>
-						<Link href="/blog">
-							<a className="nav-link">Blog</a>
+						<Link href="/blogs">
+							<a className="nav-link">Blogs</a>
 						</Link>
 					</li>
 					<li>

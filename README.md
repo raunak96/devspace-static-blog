@@ -18,3 +18,7 @@ yarn dev
 ### Parsing Frontmatter in Markdown files
 Using package [gray-matter](https://github.com/jonschlinkert/gray-matter).
 
+### Parsing Markdown Content to HTML
+- Using package [marked](https://github.com/markedjs/marked).
+- The html then injected to page using dangerouslySetInnerHTML prop provided by React.
+

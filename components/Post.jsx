@@ -5,7 +5,7 @@ const { default: Link } = require("next/link");
 
 const Post = ({ post }) => {
 	return (
-		<div className="px-10 py-6 bg-white shadow-md rounded-md my-4 border border-gray-200 mx-2">
+		<div className="px-7 py-6 bg-white shadow-md rounded-md my-4 border border-gray-200 mx-2">
 			<Image
 				src={post.cover_image}
 				width={600}
@@ -29,7 +29,7 @@ const Post = ({ post }) => {
 			</div>
 			<div className="mt-4 flex justify-between items-center">
 				<Link href={`/blogs/${post.slug}`}>
-					<a className="text-gray-700 hover:text-blue-600">
+					<a className="text-gray-500 hover:text-blue-600">
 						Read More
 					</a>
 				</Link>

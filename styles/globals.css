@@ -1,3 +1,23 @@
+html::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+	background-color: #f5f5f5;
+	border-radius: 10px;
+}
+
+html::-webkit-scrollbar {
+	width: 12px;
+	background-color: #f5f5f5;
+	border-radius: 10px;
+}
+
+html::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+	background-color: #555;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -6,4 +26,55 @@
 	.nav-link {
 		@apply cursor-pointer uppercase text-base hover:text-indigo-300 opacity-80 hover:opacity-100;
 	}
+}
+
+/* Fix category colors in production */
+.bg-yellow-600 {
+	background-color: #d97705;
+}
+.bg-blue-600 {
+	background: #3929eb;
+}
+.bg-green-600 {
+	background-color: #049669;
+}
+.bg-purple-600 {
+	background-color: #7730db;
+}
+.bg-red-600 {
+	background-color: #a70b34;
+}
+.bg-indigo-600 {
+	background-color: #4f46e5;
+}
+
+/* Blog Body basic styles */
+p {
+	margin: 15px 0;
+	line-height: 1.8;
+}
+
+.blog-body ul,
+ol {
+	font-size: 110%;
+	line-height: 2.3;
+	font-weight: bold;
+	margin: 10px 0;
+}
+
+.blog-body pre {
+	background: #f4f4f4;
+	padding: 20px;
+	margin: 20px 0;
+	line-height: 2.3;
+}
+
+.blog-body h1 {
+	font-size: 35px;
+}
+
+.blog-body h2,
+.blog-body h3,
+.blog-body h4 {
+	font-size: 27px;
 }

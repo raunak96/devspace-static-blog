@@ -17,7 +17,7 @@ const HomePage = ({ posts }) => {
 			</div>
 			<div className="flex justify-center">
 				<Link href="/blogs">
-					<button className="px-4 py-3 my-5 border border-gray-500 text-gray-800 rounded-md outline-none focus:ring focus:ring-gray-200 select-none hover:text-white hover:bg-gray-900 transition duration-300 ease-in">
+					<button className="w-1/3 px-4 py-3 my-5 border border-gray-500 text-gray-800 rounded-md outline-none focus:ring focus:ring-gray-200 select-none hover:text-white hover:bg-gray-900 transition duration-300 ease-in">
 						All Posts
 					</button>
 				</Link>
