@@ -5,15 +5,29 @@ import Post from "components/Post";
 import { BLOGS_PER_PAGE } from "config";
 import getPosts from "lib/getPosts";
 import Pagination from "components/Pagination";
+import CategoryList from "components/CategoryList";
 
-const BlogsPage = ({ posts, numberOfPages, hasMorePages, currentPage }) => {
+const BlogsPage = ({
+	posts,
+	numberOfPages,
+	hasMorePages,
+	currentPage,
+	categories,
+}) => {
 	return (
 		<Layout title={`Blogs - Page ${currentPage}`}>
-			<h1 className="text-4xl border-b-4 p-5 mb-3">Blogs</h1>
-			<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-				{posts.map(({ slug, ...post }) => (
-					<Post key={slug} post={{ slug, ...post }} />
-				))}
+			<div className="grid grid-cols-12 gap-x-3">
+				<div className="col-span-7 md:col-span-9 xl:col-span-9">
+					<h1 className="text-4xl border-b-4 p-5 mb-3">Blogs</h1>
+					<div className="grid md:grid-cols-2 xl:grid-cols-3 gap-5">
+						{posts.map(({ slug, ...post }) => (
+							<Post key={slug} post={{ slug, ...post }} />
+						))}
+					</div>
+				</div>
+				<div className="col-span-5 md:col-span-3 xl:col-span-3 mr-2">
+					<CategoryList categories={categories} />
+				</div>
 			</div>
 			<Pagination
 				currentPage={currentPage}
@@ -46,7 +60,7 @@ export async function getStaticProps({ params }) {
 	const numberOfPages = Math.ceil(files.length / BLOGS_PER_PAGE);
 
 	const posts = getPosts();
-
+	const categories = [...new Set([...posts.map(post => post.category)])];
 	return {
 		props: {
 			posts: posts.slice(
@@ -56,6 +70,7 @@ export async function getStaticProps({ params }) {
 			numberOfPages,
 			currentPage: pageNumber,
 			hasMorePages: numberOfPages > pageNumber,
+			categories,
 		},
 	};
 }
