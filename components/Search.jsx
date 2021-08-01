@@ -10,10 +10,10 @@ const Search = () => {
 	const getResults = useMemo(
 		() =>
 			debounce(async term => {
-				const res = await fetch(`/api/search?q=${term}`);
+				const res = await fetch(`/api/search?q=${term.toLowerCase()}`);
 				const results = await res.json();
 				setSearchResult(results);
-			}, 2000),
+			}, 1000),
 		[]
 	);
 
@@ -23,9 +23,9 @@ const Search = () => {
 	};
 
 	return (
-		<div className="bg-gray-600 p-4 relative">
+		<div className="bg-gray-600 px-2 py-4 sm:px-4 relative">
 			<div className="flex items-center justify-center md:justify-end">
-				<div className="w-4/5 md:w-1/3 flex justify-between items-center px-4 py-3 bg-gray-200 rounded-full mr-3 text-gray-600 text-sm focus-within:bg-white">
+				<div className="w-full md:w-1/3 flex justify-between items-center px-2 py-3 bg-gray-200 rounded-full mr-3 text-gray-600 text-sm focus-within:bg-white">
 					<input
 						ref={searchRef}
 						type="search"

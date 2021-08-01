@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Navbar = () => {
 	return (
-		<nav className="bg-gray-900 text-gray-100 shadow-md sticky top-0 z-30">
+		<nav className="bg-gray-900 text-gray-100 shadow-md sticky top-0 z-50">
 			<div className="container mx-auto p-5 flex flex-col md:flex-row items-center flex-wrap justify-between">
 				<Link href="/">
 					<a className="flex items-center font-medium mb-4 md:mb-0">

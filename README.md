@@ -1,6 +1,10 @@
 [![wakatime](https://wakatime.com/badge/github/raunak96/devspace-static-blog.svg)](https://wakatime.com/badge/github/raunak96/devspace-static-blog)
 # DevSpace - Static Blog Site (NextJs + TailwindCss + Markdown)  
 
+![DevSpace Blog](/public/images/app-demo.png 'DevSpace Blog')
+
+[VIEW DEMO](https://rawn-blog.vercel.app/)
+
 ## Getting Started
 
 Clone this repository and then run the following commands:

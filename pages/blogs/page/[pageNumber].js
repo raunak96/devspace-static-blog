@@ -45,8 +45,8 @@ export async function getStaticPaths() {
 	const numberOfPages = Math.ceil(files.length / BLOGS_PER_PAGE);
 
 	const paths = [];
-	for (let i = 0; i < numberOfPages; i++) {
-		paths.push({ params: { pageNumber: (i + 1).toString() } });
+	for (let i = 1; i <= numberOfPages; i++) {
+		paths.push({ params: { pageNumber: i.toString() } });
 	}
 	return {
 		paths,
