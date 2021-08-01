@@ -40,3 +40,13 @@ Using package [gray-matter](https://github.com/jonschlinkert/gray-matter).
   ```bash
   serve -s out
   ``` 
+
+### Caching Data for Search because it calls our API route **/api/search** client side as we type in search box
+
+- In NextJs, api routes behave as serverless functions when deployed so they cannot use fileSystem(fileReaders and writers), hence we cannot directly read and parse data from markdown files and resond with this result unlike getStaticProps which is run server side(in NodeJs) which can use filesystem.
+
+- For this, we make a **script** ( [/scripts/cache.js](/scripts/cache.js) ), which we will run before deployment ( i.e. as soon as we commit the code but before pushing to remote ).
+
+- This script will parse all markdown files and write that data in another file in a constant ( [/cache/data.js](cache/data.js) ) and export the constant.
+  
+- Now in API handler, we can simply import the constant from the cache which has the data and return it after processing it.

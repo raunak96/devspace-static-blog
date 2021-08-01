@@ -13,7 +13,7 @@ const Search = () => {
 				const res = await fetch(`/api/search?q=${term}`);
 				const results = await res.json();
 				setSearchResult(results);
-			}, 3000),
+			}, 2000),
 		[]
 	);
 

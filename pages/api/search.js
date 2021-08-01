@@ -1,10 +1,12 @@
 import getPosts from "lib/getPosts";
 
-export default function handler(req, res) {
+export default async function handler(req, res) {
 	let posts = [];
 	const searchTerm = req.query.q;
 	if (process.env.NODE_ENV === "production") {
-		// Fetch from cache as for static site api runs as serverless fn and has not access to fileSystem
+		// Fetch from cache as for static site api runs as serverless fn and cannot read/write to/from files
+		const { posts: cachedPosts } = await import("../../cache/data");
+		posts = cachedPosts;
 	} else {
 		posts = getPosts();
 	}

@@ -3,7 +3,8 @@
 	"scripts": {
 		"dev": "next dev",
 		"build": "next build",
-		"start": "next start"
+		"start": "next start",
+		"cache-blogs": "node scripts/cache.js"
 	},
 	"dependencies": {
 		"gray-matter": "^4.0.3",
