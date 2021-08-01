@@ -3,7 +3,7 @@ import Layout from "components/Layout";
 import fs from "fs";
 import matter from "gray-matter";
 import Link from "next/link";
-// import Image from "next/image";
+import Image from "next/image";
 import path from "path";
 import marked from "marked";
 
@@ -25,7 +25,7 @@ const BlogPage = ({ frontmatter, content, slug }) => {
 						<CategoryLabel>{category}</CategoryLabel>
 					</div>
 					<div className="w-full h-[650px] relative">
-						<img
+						<Image
 							src={cover_image}
 							layout="fill"
 							objectFit="cover"
@@ -36,7 +36,7 @@ const BlogPage = ({ frontmatter, content, slug }) => {
 					<div className="flex items-center justify-between bg-gray-100 rounded-md px-3 py-2 mt-7">
 						<div className="flex items-center space-x-3">
 							<div className="h-10 w-10 relative hidden sm:block">
-								<img
+								<Image
 									src={author_image}
 									layout="fill"
 									objectFit="cover"

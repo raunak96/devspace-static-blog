@@ -16,8 +16,8 @@ const BlogsPage = ({
 }) => {
 	return (
 		<Layout title={`Blogs - Page ${currentPage}`}>
-			<div className="grid grid-cols-12 gap-x-3">
-				<div className="col-span-7 md:col-span-9 xl:col-span-9">
+			<div className="flex flex-col-reverse sm:grid sm:grid-cols-12 sm:gap-x-3">
+				<div className="sm:col-span-7 md:col-span-8 xl:col-span-9">
 					<h1 className="text-4xl border-b-4 p-5 mb-3">Blogs</h1>
 					<div className="grid md:grid-cols-2 xl:grid-cols-3 gap-5">
 						{posts.map(({ slug, ...post }) => (
@@ -25,7 +25,7 @@ const BlogsPage = ({
 						))}
 					</div>
 				</div>
-				<div className="col-span-5 md:col-span-3 xl:col-span-3 mr-2">
+				<div className="sm:col-span-5 md:col-span-4 xl:col-span-3 mr-2">
 					<CategoryList categories={categories} />
 				</div>
 			</div>

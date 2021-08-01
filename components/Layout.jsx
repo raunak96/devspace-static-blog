@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Navbar from "./Navbar";
+import Search from "./Search";
 
 const Layout = ({ title, keywords, description, children }) => {
 	return (
@@ -86,6 +87,7 @@ const Layout = ({ title, keywords, description, children }) => {
 				<meta name="theme-color" content="#ffffff" />
 			</Head>
 			<Navbar />
+			<Search />
 			<main className="container mx-auto my-7">{children}</main>
 		</>
 	);

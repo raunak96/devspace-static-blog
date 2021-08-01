@@ -10,8 +10,8 @@ const CategoryPage = ({ posts, category, categories }) => {
 	return (
 		<Layout
 			title={`${category[0].toUpperCase()}${category.slice(1)} | Blog`}>
-			<div className="grid grid-cols-12 gap-x-3">
-				<div className="col-span-7 md:col-span-9 xl:col-span-9">
+			<div className="flex flex-col-reverse sm:grid sm:grid-cols-12 gap-x-3">
+				<div className="col-span-7 md:col-span-8 xl:col-span-9">
 					<h1 className="text-4xl border-b-4 p-5 mb-3">
 						Blogs about {category[0].toUpperCase()}
 						{category.slice(1)}
@@ -22,7 +22,7 @@ const CategoryPage = ({ posts, category, categories }) => {
 						))}
 					</div>
 				</div>
-				<div className="col-span-5 md:col-span-3 xl:col-span-3 mr-2">
+				<div className="col-span-5 md:col-span-4 xl:col-span-3 mr-2">
 					<CategoryList
 						categories={categories}
 						activeCategory={category}
