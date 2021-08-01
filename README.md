@@ -24,7 +24,7 @@ Using package [gray-matter](https://github.com/jonschlinkert/gray-matter).
 
 ### SERVING STATIC SITE LOCALLY
 > We use the [serve](https://github.com/vercel/serve) package for this.
-- In [package.json]("./package.json"), do the following in scripts:
+- In [package.json](/package.json), do the following in scripts:
   `build: next build && next export`
 - Before running the above the above script to export static HTML, see to the following:
   - If we are using **next/image** Image component for Image Optimisation, `next export` will not work. To make sure, it does ,we can do the following:
