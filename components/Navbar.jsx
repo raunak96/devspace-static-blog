@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
+// import Image from "next/image";
 
 const Navbar = () => {
 	return (
@@ -8,7 +8,7 @@ const Navbar = () => {
 				<Link href="/">
 					<a className="flex items-center font-medium mb-4 md:mb-0">
 						<div className="h-10 w-10 relative">
-							<Image
+							<img
 								src="/images/logo.png"
 								layout="fill"
 								objectFit="contain"

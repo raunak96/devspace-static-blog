@@ -1,12 +1,11 @@
 import CategoryLabel from "./CategoryLabel";
-
-const { default: Image } = require("next/image");
-const { default: Link } = require("next/link");
+import Link from "next/link";
+// import Image from "next/image";
 
 const Post = ({ post }) => {
 	return (
 		<div className="px-7 py-6 bg-white shadow-md rounded-md my-4 border border-gray-200 mx-2">
-			<Image
+			<img
 				src={post.cover_image}
 				width={600}
 				height={420}
@@ -35,7 +34,7 @@ const Post = ({ post }) => {
 				</Link>
 				<div className="sm:flex items-center">
 					<div className="h-10 w-10 relative hidden sm:block mr-4">
-						<Image
+						<img
 							src={post.author_image}
 							alt={post.author}
 							className="rounded-full"
